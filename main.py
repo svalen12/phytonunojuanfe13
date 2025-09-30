@@ -1,6 +1,10 @@
 #Creando variables y ciclos en python
 menuOpciones=0
 
+#pasos para crear una lista
+#1. se crea una variable utilizando corchetes
+listaProductos=[]
+
 while menuOpciones != 5:
     print("Bienvenido a bodegas juanFe")
     print("**********************************")
@@ -14,6 +18,23 @@ while menuOpciones != 5:
 
     if menuOpciones ==1 :
         print("🛒comenzaremos a registrar un producto: \n")
+
+        #un producto es un diccionario(objeto)
+        #pasos para crear un diccionario
+        #1creamos una variable utilizando llaves
+        diccionarioProducto={}
+        #2. Agrgamos valores y llaves al diccionario
+        diccionarioProducto["id"]=int(input("Digita el nombre del producto: "))
+        diccionarioProducto["nombre"]=input("Digita el nombre del producto: ")
+        diccionarioProducto["descripcion"]=float(input("Digita la descripcion del producto: "))
+        diccionarioProducto["precio"]=int(input("Digita el precio del producto: "))
+        diccionarioProducto["cantidad"]=int(input("Digita la cantidad del producto: "))
+        diccionarioProducto["imagen"]=input("Digita la imagen del producto: ")
+        diccionarioProducto["marca"]=input(("Digita la marca del producto: "))
+
+        #3. Agregamos el diccionario a la lista
+        listaProductos.append(diccionarioProducto)
+        print("✔️Producto agregado correctamente... \n")
     elif menuOpciones ==2:
         print("👀Revisaremos nuestro inventario: \n")
     elif menuOpciones ==3:
